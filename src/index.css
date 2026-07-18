@@ -2075,3 +2075,18 @@ a {
     color: var(--text-muted);
 }
 
+/* Junior Hackathon Floating Container */
+.junior-floating-card-container {
+    position: absolute;
+    top: -320px; /* Aligned vertically right below the ceiling spotlight pipe */
+    right: 48px; /* Positioned on the right side of the spotlight room */
+    z-index: 30;
+    pointer-events: auto;
+}
+
+@media (max-width: 992px) {
+    .junior-floating-card-container {
+        right: 24px;
+    }
+}
+

@@ -426,6 +426,19 @@ export const VolumetricHero = () => {
   return (
     <VolumetricStudio className="flex items-center justify-center">
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8 pointer-events-none z-20 select-none">
+        {/* Junior Hackathon floating button (desktop/tablet-only) */}
+        <div className="junior-floating-card-container hidden md:block pointer-events-auto">
+          <a 
+            href="https://forms.gle/nBespXoUn4PGBpcW9" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hero-action-btn hero-btn-primary hover:scale-[1.03] active:scale-[0.98]"
+          >
+            <span>Junior Hackathon <br />
+               Registration (Class 10-12)</span>
+            <ArrowTrendUpIcon />
+          </a>
+        </div>
         <motion.div
           initial="hidden"
           animate="visible"
