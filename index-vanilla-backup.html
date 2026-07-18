@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="INNOVIK 6.0 – International Hackathon 2026. Central India's First International Hackathon organized by Vikrant Institute of Technology & Management (VITM), Indore. Battle cry: CODE • CREATE • CONQUER. Theme: Agentic AI for Smart Solutions.">
+    <title>INNOVIK 6.0 – International Hackathon 2026 | VITM Indore</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="INNOVIK 6.0 Home">
+                <span class="logo-accent">INNOVIK</span> 6.0
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#problems" class="nav-link">Problems</a></li>
+                    <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                    <li><a href="#rules" class="nav-link">Rules</a></li>
+                    <li><a href="#prizes" class="nav-link">Prizes</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+                <a href="https://forms.gle/nBespXoUn4PGBpcW9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary nav-cta">Register Now!</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge glow-badge">
+                        <i class="fa-solid fa-microchip"></i> Agentic AI for Smart Solutions
+                    </div>
+                    <span class="hero-subtitle">Vikrant Institute of Technology & Management (VITM), Indore</span>
+                    <h1 class="hero-title">
+                        INNOVIK 6.0
+                    </h1>
+                    <p class="hero-tagline">Central India's First International Hackathon</p>
+                    
+                    <div class="battle-cry">
+                        <span class="word">CODE</span>
+                        <span class="dot">•</span>
+                        <span class="word">CREATE</span>
+                        <span class="dot">•</span>
+                        <span class="word">CONQUER</span>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="countdown-wrapper" aria-label="Countdown to hackathon start">
+                        <div class="countdown-title">HACKATHON STARTS IN:</div>
+                        <div class="countdown" id="countdown-timer">
+                            <div class="time-block">
+                                <span class="time-num" id="days">00</span>
+                                <span class="time-label">DAYS</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="time-num" id="hours">00</span>
+                                <span class="time-label">HOURS</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="time-num" id="minutes">00</span>
+                                <span class="time-label">MINUTES</span>
+                            </div>
+                            <div class="time-block">
+                                <span class="time-num" id="seconds">00</span>
+                                <span class="time-label">SECONDS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="https://forms.gle/nBespXoUn4PGBpcW9" target="_blank" rel="noopener noreferrer" class="btn btn-primary ripple">
+                            Register Now! <i class="fa-solid fa-arrow-trend-up"></i>
+                        </a>
+                        <a href="#about" class="btn btn-outline">
+                            Explore Event <i class="fa-solid fa-circle-info"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-wrapper">
+                        <img src="assets/hero.png" alt="Futuristic Agentic AI Cybernetic Visualization" class="hero-img">
+                        <div class="orb glow-orb-1"></div>
+                        <div class="orb glow-orb-2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar-wrapper">
+                <div class="container">
+                    <div class="stats-bar">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Participants</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-number">24 Hours</span>
+                                <span class="stat-label">Non-Stop Coding</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-number">10</span>
+                                <span class="stat-label">Problem Statements</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+                            <div class="stat-content">
+                                <span class="stat-number">Rs. 2,00,000</span>
+                                <span class="stat-label">Total Prize Pool</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">About the Event</span>
+                    <h2 class="section-title">Global Innovation Challenge</h2>
+                    <div class="header-bar"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-card main-about">
+                        <h3>INNOVIK 6.0 – International Hackathon 2026</h3>
+                        <p>INNOVIK 6.0 is a global innovation challenge designed to bring together students, innovators, developers, researchers, and technology enthusiasts to develop impactful solutions for real-world challenges through emerging technologies and intelligent systems. The hackathon aims to foster innovation, creativity, collaboration, entrepreneurship, and technology-driven problem solving while providing participants with national and international exposure.</p>
+                        
+                        <div class="event-details-grid">
+                            <div class="detail-box">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <div>
+                                    <h4>Event Dates</h4>
+                                    <p>15–16 September 2026</p>
+                                </div>
+                            </div>
+                            <div class="detail-box">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                <div>
+                                    <h4>Venue</h4>
+                                    <p>VITM, Indore Campus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-card theme-about">
+                        <div class="theme-icon"><i class="fa-solid fa-brain"></i></div>
+                        <span class="theme-tag">Main Theme</span>
+                        <h3>Agentic AI for Smart Solutions</h3>
+                        <p>This year, INNOVIK 6.0 places special emphasis on <strong>Agentic AI</strong> — autonomous intelligent systems designed to plan, decide, act, and collaborate to achieve complex objectives. Innovators will harness autonomous agents, multi-agent frameworks, machine learning models, and smart infrastructure to pioneer the next generation of solutions across industry sectors.</p>
+                        
+                        <div class="theme-visuals">
+                            <div class="tech-tag">Autonomous Agents</div>
+                            <div class="tech-tag">Multi-Agent Systems</div>
+                            <div class="tech-tag">Machine Learning</div>
+                            <div class="tech-tag">Cloud Integration</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statements Section -->
+        <section id="problems" class="problems-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Problem Statements</span>
+                    <h2 class="section-title">Explore the Challenges</h2>
+                    <div class="header-bar"></div>
+                    <p class="section-desc">Select tags below to filter the 10 core problem statements by technology, platform, or theme.</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls" id="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Challenges</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                    <button class="filter-btn" data-filter="iot">IoT</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
+                    <button class="filter-btn" data-filter="hardware">Hardware</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud Computing</button>
+                    <button class="filter-btn" data-filter="analytics">Data Analytics</button>
+                </div>
+
+                <!-- Problems Carousel Section (Gallery Stack style) -->
+                <div class="problems-carousel-section">
+                    <div class="problems-deck-wrapper">
+                        <button class="carousel-control prev" id="carousel-prev" aria-label="Previous challenge">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="problems-deck" id="problems-deck">
+                            <!-- Problem 1 -->
+                            <div class="problem-card" data-categories="software ai-ml cloud analytics">
+                                <div class="problem-num">01</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Academic & Education</span>
+                                    <h3>Intelligent Academic Planning & Student Success Platform</h3>
+                                </div>
+                                <p class="problem-desc">A smart web-based system that helps students effectively plan their academic journey, track progress, predict performance risks, and receive personalized interventions. The platform uses AI/ML, analytics, and cloud technologies to provide institutions, faculty, and students with a comprehensive ecosystem for academic success management, early warning systems, and data-driven educational insights.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI/ML</span>
+                                    <span class="category-tag"><i class="fa-solid fa-cloud"></i> Cloud</span>
+                                    <span class="category-tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 2 -->
+                            <div class="problem-card" data-categories="software hardware ai-ml iot cloud">
+                                <div class="problem-num">02</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Smart Healthcare</span>
+                                    <h3>Smart Healthcare Assistance & Patient Monitoring System</h3>
+                                </div>
+                                <p class="problem-desc">An intelligent, end-to-end healthcare platform that enables remote patient monitoring through wearable IoT sensors, provides AI-powered health analytics, connects patients with healthcare providers through telemedicine, and supports chronic disease management. The system should reduce healthcare accessibility barriers while improving diagnostic accuracy and patient outcomes.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-microchip"></i> Hardware</span>
+                                    <span class="category-tag"><i class="fa-solid fa-wifi"></i> IoT</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 3 -->
+                            <div class="problem-card" data-categories="software ai-ml iot cloud analytics">
+                                <div class="problem-num">03</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Sustainable Agriculture</span>
+                                    <h3>Sustainable Agriculture Advisory Platform</h3>
+                                </div>
+                                <p class="problem-desc">A comprehensive digital platform that empowers farmers with AI-driven insights for crop planning, soil health analysis, weather adaptation, pest management, and market guidance. The platform integrates satellite imagery, IoT sensor data, and expert knowledge to optimize agricultural productivity while promoting environmentally sustainable farming practices.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                    <span class="category-tag"><i class="fa-solid fa-wifi"></i> IoT</span>
+                                    <span class="category-tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 4 -->
+                            <div class="problem-card" data-categories="software ai-ml iot cloud analytics">
+                                <div class="problem-num">04</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Transportation & Mobility</span>
+                                    <h3>Intelligent Transportation & Traffic Optimization System</h3>
+                                </div>
+                                <p class="problem-desc">An AI-powered intelligent transportation system that optimizes traffic flow, predicts congestion, manages public transit efficiency, and reduces urban mobility challenges. The system should incorporate real-time data processing, adaptive signal control, route optimization, and multi-modal transportation integration to create a seamless and sustainable urban mobility ecosystem.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                    <span class="category-tag"><i class="fa-solid fa-wifi"></i> IoT</span>
+                                    <span class="category-tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 5 -->
+                            <div class="problem-card" data-categories="software ai-ml cloud">
+                                <div class="problem-num">05</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Digital Tourism & Culture</span>
+                                    <h3>Digital Tourism & Cultural Heritage Experience</h3>
+                                </div>
+                                <p class="problem-desc">An innovative digital platform that revolutionizes tourism experiences through AI personalization, AR/VR immersive technologies, and intelligent cultural heritage preservation. The solution should enable virtual exploration of historical sites, provide personalized travel recommendations, support multilingual assistance, and create engaging digital narratives that make cultural heritage accessible to global audiences.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                    <span class="category-tag"><i class="fa-solid fa-vr-cardboard"></i> AR/VR</span>
+                                    <span class="category-tag"><i class="fa-solid fa-mobile-screen-button"></i> Mobile</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 6 -->
+                            <div class="problem-card" data-categories="software hardware ai-ml iot cloud">
+                                <div class="problem-num">06</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Waste & Environment</span>
+                                    <h3>Smart Waste Management & Environmental Monitoring</h3>
+                                </div>
+                                <p class="problem-desc">An intelligent waste management ecosystem that leverages AI, IoT sensors, and predictive analytics to optimize waste collection routes, monitor landfill capacity, track recycling rates, and provide real-time environmental quality monitoring. The system should reduce operational costs, minimize environmental impact, and engage citizens in sustainable waste practices.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-microchip"></i> Hardware</span>
+                                    <span class="category-tag"><i class="fa-solid fa-wifi"></i> IoT</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 7 -->
+                            <div class="problem-card" data-categories="software ai-ml iot cloud">
+                                <div class="problem-num">07</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Disaster Management</span>
+                                    <h3>Disaster Preparedness & Emergency Response Platform</h3>
+                                </div>
+                                <p class="problem-desc">A comprehensive disaster management platform that combines AI-powered risk prediction, real-time emergency coordination, resource allocation optimization, and community resilience building. The system should integrate satellite data, IoT sensor networks, GIS mapping, and communication systems to provide early warning alerts, coordinate emergency responders, and support recovery operations.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                    <span class="category-tag"><i class="fa-solid fa-wifi"></i> IoT</span>
+                                    <span class="category-tag"><i class="fa-solid fa-earth-americas"></i> GIS</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 8 -->
+                            <div class="problem-card" data-categories="software ai-ml cloud analytics">
+                                <div class="problem-num">08</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Digital Governance</span>
+                                    <h3>Citizen Engagement & Public Grievance Management</h3>
+                                </div>
+                                <p class="problem-desc">A sophisticated digital governance platform that enables transparent citizen-government interaction, streamlines public service delivery, manages grievances intelligently, and uses AI to analyze public feedback for policy improvement. The solution should promote inclusive digital governance that is accessible, responsive, and transparent.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                    <span class="category-tag"><i class="fa-solid fa-cloud"></i> Cloud</span>
+                                    <span class="category-tag"><i class="fa-solid fa-mobile-screen-button"></i> Mobile</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 9 -->
+                            <div class="problem-card" data-categories="software ai-ml cloud analytics">
+                                <div class="problem-num">09</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Workforce & Education</span>
+                                    <h3>Future Workforce & Career Guidance Ecosystem</h3>
+                                </div>
+                                <p class="problem-desc">An AI-powered career development platform that provides personalized skill assessment, identifies skill gaps, recommends learning pathways, predicts industry trends, and connects individuals with opportunities. The system should help students, job-seekers, and professionals navigate the rapidly evolving job market through intelligent career planning and continuous learning.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                    <span class="category-tag"><i class="fa-solid fa-cloud"></i> Cloud</span>
+                                    <span class="category-tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+                                </div>
+                            </div>
+
+                            <!-- Problem 10 -->
+                            <div class="problem-card" data-categories="software ai-ml cloud">
+                                <div class="problem-num">10</div>
+                                <div class="problem-header">
+                                    <span class="problem-theme-tag">Cyber Security</span>
+                                    <h3>Cyber Security & Digital Trust Framework</h3>
+                                </div>
+                                <p class="problem-desc">An advanced cybersecurity framework that leverages AI for real-time threat detection, vulnerability assessment, automated incident response, and digital trust management. The system should protect critical infrastructure, detect emerging cyber threats, ensure data privacy compliance, and build resilient digital systems for organizations and individuals.</p>
+                                <div class="problem-footer">
+                                    <span class="category-tag"><i class="fa-solid fa-code"></i> Software</span>
+                                    <span class="category-tag"><i class="fa-solid fa-brain"></i> AI</span>
+                                    <span class="category-tag"><i class="fa-solid fa-shield-halved"></i> Security</span>
+                                    <span class="category-tag"><i class="fa-solid fa-cubes"></i> Blockchain</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control next" id="carousel-next" aria-label="Next challenge">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-indicator">
+                        <div class="indicator-dots" id="indicator-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Event Timeline</span>
+                    <h2 class="section-title">Hackathon Schedule</h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="schedule-tabs">
+                    <button class="tab-btn active" data-tab="day1" aria-controls="day1-timeline">
+                        <span class="tab-day">Day 1</span>
+                        <span class="tab-date">Sept 15, 2026</span>
+                    </button>
+                    <button class="tab-btn" data-tab="day2" aria-controls="day2-timeline">
+                        <span class="tab-day">Day 2</span>
+                        <span class="tab-date">Sept 16, 2026</span>
+                    </button>
+                </div>
+
+                <div class="timeline-container">
+                    <!-- Day 1 Timeline -->
+                    <div class="timeline active" id="day1-timeline" role="tabpanel" aria-label="Day 1 Schedule">
+                        <div class="timeline-item">
+                            <div class="time-meta">08:00 AM – 09:30 AM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Registration & Reporting</h3>
+                                <p>Arrival of teams, scanning confirmations, kit distribution, and allotment of workstations.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">09:30 AM – 11:00 AM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Inaugural Ceremony</h3>
+                                <p>Welcome address by leadership and formal commencement of INNOVIK 6.0.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">11:00 AM – 11:30 AM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Orientation Session</h3>
+                                <p>Detailed brief on judging criteria, submit guidelines, mentor rules, and support setup.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item highlight">
+                            <div class="time-meta">11:30 AM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Hackathon Starts! <i class="fa-solid fa-play"></i></h3>
+                                <p>The 24-hour development clock officially begins. Code engines start firing!</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">01:00 PM – 02:00 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Lunch Break</h3>
+                                <p>Refuel at the main dining arena.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">02:00 PM – 04:00 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Mentorship Session – I</h3>
+                                <p>Industry mentors visit student desks to review architectures, logic flows, and technology selections.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">04:00 PM – 05:00 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Review Round – I</h3>
+                                <p>Initial progress check. Panels of internal judges review basic UI mockups and design direction.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">05:00 PM – 07:30 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Development Sprint</h3>
+                                <p>Active coding and hardware integrations.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">07:30 PM – 08:30 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Dinner</h3>
+                                <p>Networking dinner at the campus courtyard.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item highlight">
+                            <div class="time-meta">08:30 PM Onwards</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Overnight Development Sprint <i class="fa-solid fa-moon"></i></h3>
+                                <p>Late night coding sprint. Collaborative environments active, with tea/coffee support.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">11:00 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Tea Break</h3>
+                                <p>Quick caffeine boost for the late-night warriors.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">11:30 PM Onwards</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Coding Continues</h3>
+                                <p>Development rolls on through the night with dynamic tech-support on standby.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 Timeline -->
+                    <div class="timeline" id="day2-timeline" role="tabpanel" aria-label="Day 2 Schedule" style="display: none;">
+                        <div class="timeline-item">
+                            <div class="time-meta">07:00 AM – 08:00 AM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Breakfast</h3>
+                                <p>Fuel up for the final push.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item highlight">
+                            <div class="time-meta">08:00 AM – 10:00 AM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Final Development & Submission</h3>
+                                <p>Final testing, bug fixes, preparation of presentation slide decks, and code commit submission.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">10:00 AM – 12:00 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Project Demonstration</h3>
+                                <p>Teams present interactive demos and codebases to external jury members at their booths.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">12:00 PM – 01:00 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Final Evaluation by Jury</h3>
+                                <p>Jury panels review marks, deliberate top designs, and run comparative scoring audits.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">01:00 PM – 01:30 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Result Finalization</h3>
+                                <p>Ranking aggregation and consolidation of official awards sheet.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item highlight-prizes">
+                            <div class="time-meta">01:30 PM – 02:30 PM</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Valedictory Ceremony & Prize Distribution <i class="fa-solid fa-award"></i></h3>
+                                <p>Announcement of winners and presentation of trophies, certificates, and cash prizes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-meta">02:30 PM Onwards</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-info">
+                                <h3>Lunch & Departure</h3>
+                                <p>Post-event lunch and official check-out from Indore campus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section id="rules" class="rules-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Guidelines</span>
+                    <h2 class="section-title">Rules & Regulations</h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <div class="rule-icon-wrapper">
+                            <div class="icon-badge">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                        </div>
+                        <h3>Team Size</h3>
+                        <p>Up to 4 members per team. In alignment with promoting diversity in STEM fields, <strong>at least 1 female member is compulsory</strong> in every team.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-icon-wrapper">
+                            <div class="icon-badge">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <h3>Eligibility</h3>
+                        <p>The innovation challenge is open to students, developers, researchers, and technology enthusiasts from colleges, universities, and organizations across India.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-icon-wrapper">
+                            <div class="icon-badge">
+                                <i class="fa-solid fa-copyright"></i>
+                            </div>
+                        </div>
+                        <h3>Originality</h3>
+                        <p>All code, design systems, APIs, and digital assets must be original or properly licensed. Any form of plagiarism or pre-built system copying will lead to disqualification.</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-icon-wrapper">
+                            <div class="icon-badge">
+                                <i class="fa-solid fa-gavel"></i>
+                            </div>
+                        </div>
+                        <h3>Judging Criteria</h3>
+                        <p>Projects will be evaluated by an esteemed panel of experts based on <strong>Innovation</strong>, <strong>Real-world Impact</strong>, <strong>Technical Feasibility</strong>, <strong>User Experience (UX)</strong>, and <strong>Pitch Presentation</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prizes Section -->
+        <section id="prizes" class="prizes-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Rewards</span>
+                    <h2 class="section-title">Prizes & Pools</h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <!-- Prize Podium Layout -->
+                <div class="prize-podium">
+                    <!-- 2nd Place -->
+                    <div class="podium-card silver">
+                        <div class="prize-trophy"><i class="fa-solid fa-award"></i></div>
+                        <div class="prize-place">First Runner-Up</div>
+                        <div class="prize-amt">Rs. 50,000</div>
+                        <p class="prize-desc">Awarded to the second-highest scoring team for outstanding prototype complexity and technical design.</p>
+                    </div>
+
+                    <!-- 1st Place -->
+                    <div class="podium-card gold">
+                        <div class="prize-badge"><i class="fa-solid fa-crown"></i> CHAMPION</div>
+                        <div class="prize-trophy"><i class="fa-solid fa-trophy"></i></div>
+                        <div class="prize-place">Winner (1st Place)</div>
+                        <div class="prize-amt">Rs. 80,000</div>
+                        <p class="prize-desc">Presented to the overall winner who delivers the most innovative, viable, and stunningly executed Agentic AI solution.</p>
+                    </div>
+
+                    <!-- 3rd Place -->
+                    <div class="podium-card bronze">
+                        <div class="prize-trophy"><i class="fa-solid fa-award"></i></div>
+                        <div class="prize-place">Second Runner-Up</div>
+                        <div class="prize-amt">Rs. 30,000</div>
+                        <p class="prize-desc">Awarded to the third-highest scoring team demonstrating strong UX execution and market feasibility.</p>
+                    </div>
+                </div>
+
+                <!-- Consolation & Total Pool -->
+                <div class="prize-footer-grid">
+                    <div class="consolation-box">
+                        <div class="c-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div>
+                            <h4>Consolation Prize</h4>
+                            <p class="c-amt">Rs. 40,000</p>
+                            <p class="c-details">Allocated to recognize special mentions, out-of-the-box hardware hacks, or high-potential ideas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pool-box">
+                        <span class="pool-title">TOTAL PRIZE POOL</span>
+                        <span class="pool-amount">Rs. 2,00,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="leadership-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">VITM Indore</span>
+                    <h2 class="section-title">Organizers & Leadership</h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <!-- Testimonial Scrollable Carousel -->
+                <div class="testimonial-carousel-wrapper">
+                    <div class="testimonial-carousel-track" id="testimonial-carousel-track">
+                        <!-- Leader Card 1 -->
+                        <div class="retro-card" data-name="Shri R.S. Rathore" data-designation="Chairman, VGI" data-desc="Empowering youth through world-class technical education and visionary leadership, steering VGI institutions toward global excellence.">
+                            <div class="retro-card-bg"></div>
+                            <div class="retro-card-content">
+                                <div class="retro-avatar-wrapper">
+                                    <div class="retro-avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <p class="retro-desc">"Empowering youth through world-class technical education..."</p>
+                                <h3 class="retro-name">Shri R.S. Rathore</h3>
+                                <p class="retro-designation">Chairman, VGI</p>
+                            </div>
+                        </div>
+
+                        <!-- Leader Card 2 -->
+                        <div class="retro-card" data-name="Shri Nitin Singh Tomar" data-designation="Managing Director, VGI" data-desc="Pioneering collaborative academic partnerships and industry integrations, building modern campus infrastructures for future engineering talent.">
+                            <div class="retro-card-bg"></div>
+                            <div class="retro-card-content">
+                                <div class="retro-avatar-wrapper">
+                                    <div class="retro-avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <p class="retro-desc">"Pioneering collaborative academic partnerships..."</p>
+                                <h3 class="retro-name">Shri Nitin Singh Tomar</h3>
+                                <p class="retro-designation">Managing Director, VGI</p>
+                            </div>
+                        </div>
+
+                        <!-- Leader Card 3 -->
+                        <div class="retro-card" data-name="Smt. Garima Singh Tomar" data-designation="Treasurer, VITM" data-desc="Managing strategic financial growth and resource allocation, ensuring optimal learning ecosystems and support systems for student innovators.">
+                            <div class="retro-card-bg"></div>
+                            <div class="retro-card-content">
+                                <div class="retro-avatar-wrapper">
+                                    <div class="retro-avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <p class="retro-desc">"Managing strategic financial growth..."</p>
+                                <h3 class="retro-name">Smt. Garima Singh Tomar</h3>
+                                <p class="retro-designation">Treasurer, VITM</p>
+                            </div>
+                        </div>
+
+                        <!-- Leader Card 4 -->
+                        <div class="retro-card" data-name="Dr. Sandeep Shukla" data-designation="Joint Managing Director, VITM" data-desc="Cultivating academic research and innovation projects, driving technology-centric program designs across Vikrant portals.">
+                            <div class="retro-card-bg"></div>
+                            <div class="retro-card-content">
+                                <div class="retro-avatar-wrapper">
+                                    <div class="retro-avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <p class="retro-desc">"Cultivating academic research and innovation..."</p>
+                                <h3 class="retro-name">Dr. Sandeep Shukla</h3>
+                                <p class="retro-designation">Joint Managing Director, VITM</p>
+                            </div>
+                        </div>
+
+                        <!-- Leader Card 5 -->
+                        <div class="retro-card" data-name="Dr. Jitendra Singh Dodiya" data-designation="Principal, VITM" data-desc="Championing institutional excellence, academic discipline, and comprehensive engineering curricula to guide students to global careers.">
+                            <div class="retro-card-bg"></div>
+                            <div class="retro-card-content">
+                                <div class="retro-avatar-wrapper">
+                                    <div class="retro-avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <p class="retro-desc">"Championing institutional excellence..."</p>
+                                <h3 class="retro-name">Dr. Jitendra Singh Dodiya</h3>
+                                <p class="retro-designation">Principal, VITM</p>
+                            </div>
+                        </div>
+
+                        <!-- Leader Card 6 -->
+                        <div class="retro-card" data-name="Dr. Sanmati Jain" data-designation="Head of Department – CSE, VITM" data-desc="Fostering advanced research in AI/ML, cybersecurity, and cloud platforms, coordinating student hackathons to prepare them for next-generation tech environments.">
+                            <div class="retro-card-bg"></div>
+                            <div class="retro-card-content">
+                                <div class="retro-avatar-wrapper">
+                                    <div class="retro-avatar">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <p class="retro-desc">"Fostering advanced research in AI/ML..."</p>
+                                <h3 class="retro-name">Dr. Sanmati Jain</h3>
+                                <p class="retro-designation">Head of Department – CSE, VITM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Navigation Controls -->
+                    <div class="testimonial-carousel-controls">
+                        <button class="carousel-control prev" id="testi-prev" aria-label="Scroll left">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button class="carousel-control next" id="testi-next" aria-label="Scroll right">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Expand Overlay Dialog -->
+        <div class="leader-modal" id="leader-modal" aria-hidden="true" role="dialog">
+            <div class="leader-modal-backdrop" id="leader-modal-backdrop"></div>
+            <div class="leader-modal-content">
+                <button class="leader-modal-close" id="leader-modal-close" aria-label="Close details">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="leader-modal-body">
+                    <p class="modal-designation" id="modal-designation"></p>
+                    <h3 class="modal-name" id="modal-name"></h3>
+                    <div class="modal-quote-wrapper">
+                        <i class="fa-solid fa-quote-left modal-quote-icon"></i>
+                        <p class="modal-desc" id="modal-desc"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title">Contact & Help</h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- Contact Info -->
+                    <div class="contact-info-card">
+                        <h3>Connect with Organizers</h3>
+                        <p>Have questions about registration details, eligibility, or local transport arrangements? Reach out via phone, email, or explore official channels.</p>
+                        
+                        <div class="contact-links">
+                            <a href="tel:+918889997217" class="contact-item">
+                                <span class="c-icon"><i class="fa-solid fa-phone"></i></span>
+                                <div>
+                                    <h4>Phone (Primary Contact)</h4>
+                                    <p>+91 8889997217</p>
+                                </div>
+                            </a>
+                            <a href="tel:+919926465107" class="contact-item">
+                                <span class="c-icon"><i class="fa-solid fa-phone-volume"></i></span>
+                                <div>
+                                    <h4>Phone (Alternative Contact)</h4>
+                                    <p>+91 9926465107</p>
+                                </div>
+                            </a>
+                            <a href="mailto:hackathon@vitmindore.com" class="contact-item">
+                                <span class="c-icon"><i class="fa-solid fa-envelope"></i></span>
+                                <div>
+                                    <h4>Official Email</h4>
+                                    <p>hackathon@vitmindore.com</p>
+                                </div>
+                            </a>
+                            <a href="https://www.vitm.edu.in/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                                <span class="c-icon"><i class="fa-solid fa-globe"></i></span>
+                                <div>
+                                    <h4>Official Website</h4>
+                                    <p>https://www.vitm.edu.in/</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-card">
+                        <h3>Inquire Online</h3>
+                        <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you for reaching out! We will contact you soon.'); this.reset();">
+                            <div class="form-group">
+                                <label for="form-name">Full Name</label>
+                                <input type="text" id="form-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <input type="email" id="form-email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-msg">Your Message</label>
+                                <textarea id="form-msg" rows="4" placeholder="How can we assist you with INNOVIK 6.0?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary ripple form-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-accent">INNOVIK</span> 6.0
+                </a>
+                <p>Organized by Vikrant Institute of Technology & Management (VITM), Indore. Fostering future solutions using Agentic AI and Intelligent Systems.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/vikrant.institutions" target="_blank" rel="noopener noreferrer" aria-label="Facebook Page"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/vikrant.indore/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.vitm.edu.in/" target="_blank" rel="noopener noreferrer" aria-label="VITM Portal"><i class="fa-solid fa-building-columns"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#problems">Problem Statements</a></li>
+                    <li><a href="#schedule">Timeline</a></li>
+                    <li><a href="#rules">Rules</a></li>
+                    <li><a href="#prizes">Prizes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-meta">
+                <h3>Details</h3>
+                <p><strong>Venue:</strong> Indore Campus, Vikrant Institute of Technology & Management, Indore</p>
+                <p><strong>Official Forms:</strong> <a href="https://forms.gle/nBespXoUn4PGBpcW9" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); text-decoration: underline;">Registration Link</a></p>
+                <p><strong>Dates:</strong> 15–16 September 2026</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Vikrant Institute of Technology & Management (VITM), Indore. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" title="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
