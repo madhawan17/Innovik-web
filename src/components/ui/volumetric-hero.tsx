@@ -25,14 +25,14 @@ const MicrochipIcon = () => (
 );
 
 const ArrowTrendUpIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-1.5 h-4 w-4">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 flex-shrink-0">
     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
     <polyline points="17 6 23 6 23 12" />
   </svg>
 );
 
 const InfoIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1.5 h-4 w-4">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 flex-shrink-0">
     <circle cx="12" cy="12" r="10" />
     <line x1="12" y1="16" x2="12" y2="12" />
     <line x1="12" y1="8" x2="12.01" y2="8" />
@@ -513,7 +513,7 @@ export const VolumetricHero = () => {
               href="https://forms.gle/nBespXoUn4PGBpcW9" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold text-xs sm:text-sm md:text-base shadow-[0_4px_20px_rgba(249,115,22,0.3)] hover:shadow-[0_4px_30px_rgba(249,115,22,0.55)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 ease-out"
+              className="hero-action-btn hero-btn-primary hover:scale-[1.03] active:scale-[0.98]"
             >
               <span>Register Now!</span>
               <ArrowTrendUpIcon />
@@ -521,7 +521,7 @@ export const VolumetricHero = () => {
             
             <a 
               href="#about" 
-              className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm text-zinc-300 font-semibold text-xs sm:text-sm md:text-base hover:text-white hover:border-zinc-700 hover:bg-zinc-900/60 active:scale-[0.98] transition-all duration-300 ease-out"
+              className="hero-action-btn hero-btn-secondary hover:scale-[1.03] active:scale-[0.98]"
             >
               <span>Explore Event</span>
               <InfoIcon />

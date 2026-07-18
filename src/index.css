@@ -237,6 +237,58 @@ a {
     transform: translateY(-1px);
 }
 
+/* Custom Hero Buttons to prevent text clipping & improve aesthetics */
+.hero-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.hero-btn-primary {
+    background: linear-gradient(135deg, #ea580c, #d97706); /* orange to amber */
+    color: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(234, 88, 12, 0.3);
+}
+
+.hero-btn-primary:hover {
+    background: linear-gradient(135deg, #f97316, #f59e0b);
+    box-shadow: 0 4px 30px rgba(234, 88, 12, 0.5);
+    transform: translateY(-2px);
+}
+
+.hero-btn-secondary {
+    background: rgba(9, 9, 11, 0.6); /* zinc-950/60 */
+    border: 1px solid #27272a; /* border-zinc-800 */
+    color: #d4d4d8 !important; /* zinc-300 */
+    backdrop-filter: blur(8px);
+}
+
+.hero-btn-secondary:hover {
+    background: rgba(24, 24, 27, 0.8);
+    border-color: #3f3f46; /* zinc-700 */
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .hero-action-btn {
+        padding: 12px 24px;
+        font-size: 0.875rem;
+        gap: 8px;
+    }
+}
+
 .badge {
     display: inline-flex;
     align-items: center;
