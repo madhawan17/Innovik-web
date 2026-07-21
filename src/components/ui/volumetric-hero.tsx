@@ -432,7 +432,7 @@ export const VolumetricHero = () => {
             href="https://forms.gle/nBespXoUn4PGBpcW9" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="hero-action-btn hero-btn-primary hover:scale-[1.03] active:scale-[0.98]"
+            className="hero-action-btn hero-btn-primary hero-btn-blink hover:scale-[1.03] active:scale-[0.98]"
           >
             <span>Junior Hackathon <br />
                Registration (Class 10-12)</span>

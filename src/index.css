@@ -2090,3 +2090,19 @@ a {
     }
 }
 
+/* Blinking/glowing pulse animation for Junior Hackathon button */
+.hero-btn-blink {
+    animation: button-blink-glow 2s infinite ease-in-out;
+}
+
+@keyframes button-blink-glow {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(234, 88, 12, 0.35);
+        filter: brightness(1);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(251, 146, 60, 0.9), 0 0 20px rgba(251, 146, 60, 0.6);
+        filter: brightness(1.25);
+    }
+}
+
