@@ -242,17 +242,19 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 10px 30px;
+    gap: 10px;
+    padding: 11px 26px;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.95rem;
     border-radius: 12px;
     transition: var(--transition-normal);
     cursor: pointer;
     text-decoration: none;
     box-sizing: border-box;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: keep-all;
+    min-width: 0;
 }
 
 .hero-btn-primary {
@@ -281,11 +283,22 @@ a {
     transform: translateY(-2px);
 }
 
-@media (max-width: 640px) {
+/* Mobile: full-width buttons with tighter padding */
+@media (max-width: 639px) {
     .hero-action-btn {
-        padding: 12px 24px;
+        padding: 12px 20px;
         font-size: 0.875rem;
         gap: 8px;
+    }
+}
+
+/* Extra small screens (< 380px) */
+@media (max-width: 379px) {
+    .hero-action-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+        gap: 6px;
+        border-radius: 10px;
     }
 }
 
@@ -853,7 +866,7 @@ a {
 .problems-deck {
     position: relative;
     width: 100%;
-    height: 480px;
+    min-height: 440px;
     perspective: 1000px;
 }
 
@@ -865,11 +878,12 @@ a {
     height: 100%;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 40px;
+    padding: 32px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
     box-shadow: var(--shadow-lg);
     transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), 
                 opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), 
@@ -2078,15 +2092,23 @@ a {
 /* Junior Hackathon Floating Container */
 .junior-floating-card-container {
     position: absolute;
-    top: -320px; /* Aligned vertically right below the ceiling spotlight pipe */
-    right: 48px; /* Positioned on the right side of the spotlight room */
+    top: 100px;   /* Below the ceiling spotlight pipe, relative to hero section */
+    right: 48px;  /* Positioned on the right side of the spotlight room */
     z-index: 30;
     pointer-events: auto;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .junior-floating-card-container {
         right: 24px;
+        top: 88px;
+    }
+}
+
+@media (max-width: 992px) {
+    .junior-floating-card-container {
+        right: 16px;
+        top: 80px;
     }
 }
 

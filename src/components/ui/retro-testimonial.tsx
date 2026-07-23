@@ -282,6 +282,8 @@ const TestimonialCard = ({
 							<img
 								className="block w-full h-full object-center object-cover"
 								src={backgroundImage}
+								loading="lazy"
+								decoding="async"
 								alt="Background layer"
 								style={{ objectFit: "cover" }}
 							/>

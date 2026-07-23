@@ -431,7 +431,7 @@ export default function App() {
                   <i className="fa-solid fa-chevron-left"></i>
                 </button>
                 
-                <div className="problems-deck" style={{ position: "relative", minHeight: "380px", width: "100%", maxWidth: "680px", display: "flex", justifyContent: "center" }}>
+                <div className="problems-deck" style={{ position: "relative", minHeight: "440px", width: "100%", maxWidth: "680px", display: "flex", justifyContent: "center" }}>
                   {filteredProblems.map((prob, idx) => (
                     <div 
                       key={prob.num} 
