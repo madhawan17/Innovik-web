@@ -198,10 +198,10 @@ function Room({
             initial={{ opacity: 0 }}
             animate={{ opacity: lightsOn ? intensity : 0 }}
             transition={isFlickering ? { duration: 0 } : { delay: i * 0.1, duration: 0.8, ease: "easeInOut" }}
-            className="absolute flex w-[200px] sm:w-[280px] md:w-[360px] h-[82vh] -translate-x-1/2 justify-center pointer-events-none"
+            className="absolute flex spotlight-beam h-[82vh] -translate-x-1/2 justify-center pointer-events-none"
             style={{ 
               left: `${pos}%`, 
-              top: "calc(1% + 75px)",
+              top: "95px",
               mixBlendMode: "screen",
               willChange: "opacity"
             }}
@@ -243,7 +243,7 @@ function Room({
         }}
       >
         {[35, 50, 65].map((pos, i) => (
-          <div key={i} className="absolute flex flex-col items-center scale-[0.7] sm:scale-85 md:scale-100 origin-top" style={{ left: `${pos}%`, top: '1%', transform: 'translate(-50%, -4px)' }}>
+            <div key={i} className="spotlight-fixture absolute flex flex-col items-center" style={{ left: `${pos}%`, top: '20px' }}>
             <div className="w-[14px] h-[34px] rounded-sm border border-zinc-900 shadow-[0_5px_10px_rgba(0,0,0,0.9),inset_0_0_4px_rgba(255,255,255,0.5)] relative overflow-hidden"
                  style={{ background: 'linear-gradient(to right, #666 0%, #ffffff 40%, #999 60%, #333 100%)' }}>
                <div className="absolute top-[4px] left-1/2 -translate-x-1/2 w-[6px] h-[6px] bg-zinc-900 rounded-full shadow-[inset_0_1px_1px_rgba(0,0,0,1)]" />
@@ -446,41 +446,53 @@ export const VolumetricHero = () => {
 
   return (
     <VolumetricStudio className="flex items-center justify-center">
-      {/* Hero content wrapper — full height, vertically centered, responsive padding */}
-      <div className="relative w-full min-h-[600px] sm:min-h-[700px] md:min-h-[800px] flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 pointer-events-none z-20 select-none">
-        {/* Junior Hackathon floating button — visible md+ only, positioned absolutely */}
-        <div className="junior-floating-card-container hidden md:block pointer-events-auto">
-          <a 
-            href="https://forms.gle/nBespXoUn4PGBpcW9" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hero-action-btn hero-btn-primary hero-btn-blink hover:scale-[1.03] active:scale-[0.98]"
-          >
-            <span>Junior Hackathon <br />
-               Registration (Class 10-12)</span>
-            <ArrowTrendUpIcon />
-          </a>
-        </div>
-
-        <motion.div
+      {/* Hero content wrapper */}
+      <div className="relative z-40 w-full min-h-screen flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden">
+        {/* Layout spacer to reserve the spotlight area exactly where the light beams begin (20px top + 122px fixture = 142px) */}
+        <div className="w-full shrink-0" style={{ height: "142px" }} aria-hidden="true" />
+        
+        {/* Content container aligned to the top to maintain relationship with absolute spotlights */}
+        <div className="flex-1 flex flex-col items-center justify-start w-full pt-12 md:pt-[50px] pb-12 sm:pb-16">
+          <motion.div
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 w-full max-w-4xl pointer-events-auto"
+          className="flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto pointer-events-auto"
         >
+          {/* Restored Junior Hackathon CTA at the top */}
+          <motion.div
+            variants={itemVariants}
+            className="flex items-center justify-center w-full max-w-[280px] sm:max-w-md px-2 sm:px-4 mx-auto pointer-events-auto mb-1 sm:mb-2"
+          >
+            <a 
+              href="https://forms.gle/nBespXoUn4PGBpcW9" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="relative group flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-amber-500/80 via-orange-500/80 to-amber-500/80 border border-orange-300 shadow-[0_0_40px_rgba(249,115,22,0.6)] hover:shadow-[0_0_60px_rgba(249,115,22,0.8)] backdrop-blur-md transition-all duration-300 w-full hover:scale-[1.03] active:scale-[0.98]"
+            >
+              <div className="absolute inset-0 bg-white/20 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="relative flex items-center justify-center gap-2">
+                <span className="text-sm sm:text-base font-extrabold text-white text-center leading-snug drop-shadow-md">
+                  Junior Hackathon<br className="block sm:hidden" /> Registration (Class 10-12)
+                </span>
+                <ArrowTrendUpIcon />
+              </div>
+            </a>
+          </motion.div>
+
           {/* Badge */}
           <motion.div 
             variants={itemVariants} 
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-[10px] sm:text-xs md:text-sm font-semibold tracking-wider uppercase backdrop-blur-md shadow-[0_0_20px_rgba(249,115,22,0.12)] hover:border-orange-500/50 transition-colors duration-300"
+            className="inline-flex flex-wrap items-center justify-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-[9px] sm:text-[11px] md:text-xs lg:text-sm font-semibold tracking-wide uppercase backdrop-blur-md shadow-[0_0_20px_rgba(249,115,22,0.12)] hover:border-orange-500/50 transition-colors duration-300 max-w-[95%] mx-auto"
           >
-            <MicrochipIcon />
+          <MicrochipIcon />
             <span>Agentic AI for Smart Solutions</span>
           </motion.div>
 
           {/* Subtitle / Venue */}
           <motion.span 
             variants={itemVariants} 
-            className="text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] text-zinc-400 uppercase max-w-xs sm:max-w-md md:max-w-2xl leading-relaxed px-2"
+            className="relative z-10 text-[10px] sm:text-[11px] md:text-xs lg:text-sm font-bold tracking-[0.06em] sm:tracking-[0.1em] md:tracking-[0.15em] text-zinc-300 uppercase max-w-[280px] sm:max-w-sm md:max-w-xl lg:max-w-3xl leading-relaxed px-3 py-1 mt-1 rounded-md bg-black/40 backdrop-blur-sm text-center"
           >
             Vikrant Institute of Technology &amp; Management (VITM), Indore
           </motion.span>
@@ -488,15 +500,14 @@ export const VolumetricHero = () => {
           {/* Main Title */}
           <motion.h1 
             variants={itemVariants} 
-            className="text-[2.8rem] leading-none sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight select-none bg-gradient-to-r from-orange-400 via-amber-500 to-red-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(249,115,22,0.25)] py-1 font-sans"
-          >
+            className="text-[2rem] sm:text-[2.8rem] md:text-5xl lg:text-7xl xl:text-8xl leading-tight font-black tracking-tight text-center select-none bg-gradient-to-r from-orange-400 via-amber-500 to-red-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(249,115,22,0.25)] py-1 sm:py-2 px-2 font-sans">
             INNOVIK 6.0
           </motion.h1>
 
           {/* Tagline */}
           <motion.p 
             variants={itemVariants} 
-            className="text-sm sm:text-base md:text-xl lg:text-2xl text-zinc-300 font-medium tracking-wide max-w-xs sm:max-w-sm md:max-w-2xl leading-snug px-2"
+            className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-zinc-300 font-medium tracking-wide text-center max-w-[260px] sm:max-w-sm md:max-w-xl lg:max-w-3xl leading-relaxed px-2 sm:px-4"
           >
             Central India's First International Hackathon
           </motion.p>
@@ -504,7 +515,7 @@ export const VolumetricHero = () => {
           {/* Battle Cry */}
           <motion.div 
             variants={itemVariants} 
-            className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-xs md:text-sm font-extrabold tracking-[0.2em] sm:tracking-[0.3em] text-orange-500"
+            className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-xs md:text-sm lg:text-base font-extrabold tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] text-orange-500 px-4 text-center"
           >
             <span>CODE</span>
             <span className="text-zinc-700 font-normal select-none">•</span>
@@ -516,23 +527,23 @@ export const VolumetricHero = () => {
           {/* Countdown Timer */}
           <motion.div 
             variants={itemVariants} 
-            className="flex flex-col items-center gap-2 mt-2 sm:mt-3 w-full"
+            className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 mt-2 sm:mt-4 md:mt-5 w-full px-2 sm:px-4"
           >
-            <div className="text-[9px] sm:text-[10px] md:text-xs font-bold tracking-[0.2em] sm:tracking-[0.25em] text-zinc-500 uppercase">
+            <div className="text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] text-zinc-500 uppercase text-center">
               Hackathon Starts In:
             </div>
             
-            <div className="grid grid-cols-4 gap-2 sm:gap-3 md:gap-4 w-full max-w-[280px] sm:max-w-sm md:max-w-md px-1">
+            <div className="grid grid-cols-4 gap-2 sm:gap-3 md:gap-4 w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto">
               {Object.entries(timeLeft).map(([label, value]) => (
                 <div 
                   key={label} 
-                  className="flex flex-col items-center justify-center bg-zinc-950/60 backdrop-blur-md border border-zinc-800/60 rounded-xl p-2 sm:p-3 md:p-4 shadow-[0_10px_25px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.03)] relative overflow-hidden group hover:border-orange-500/20 transition-colors duration-500"
+                  className="flex flex-col items-center justify-center bg-zinc-950/60 backdrop-blur-md border border-zinc-800/60 rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 lg:p-5 shadow-[0_10px_25px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.03)] relative overflow-hidden group hover:border-orange-500/20 transition-colors duration-500"
                 >
                   <div className="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-mono select-all">
+                  <span className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-tight font-mono select-all">
                     {String(value).padStart(2, '0')}
                   </span>
-                  <span className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold text-zinc-500 tracking-wider uppercase mt-0.5 sm:mt-1">
+                  <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-zinc-500 tracking-wider uppercase mt-0.5">
                     {label}
                   </span>
                 </div>
@@ -543,13 +554,13 @@ export const VolumetricHero = () => {
           {/* CTA Buttons — stack vertically on very small screens, row on sm+ */}
           <motion.div 
             variants={itemVariants} 
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-4 sm:mt-6 w-full max-w-xs sm:max-w-none px-4 sm:px-0"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-5 mt-4 sm:mt-6 md:mt-8 w-full max-w-[280px] sm:max-w-none px-2 sm:px-4"
           >
             <a 
               href="https://forms.gle/nBespXoUn4PGBpcW9" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hero-action-btn hero-btn-primary hover:scale-[1.03] active:scale-[0.98] w-full sm:w-auto"
+              className="hero-action-btn hero-btn-primary hover:scale-[1.03] active:scale-[0.98] w-full sm:w-auto sm:min-w-[180px] md:min-w-[220px] justify-center"
             >
               <span>Register Now!</span>
               <ArrowTrendUpIcon />
@@ -557,29 +568,30 @@ export const VolumetricHero = () => {
             
             <a 
               href="#about" 
-              className="hero-action-btn hero-btn-secondary hover:scale-[1.03] active:scale-[0.98] w-full sm:w-auto"
+              className="hero-action-btn hero-btn-secondary hover:scale-[1.03] active:scale-[0.98] w-full sm:w-auto sm:min-w-[180px] md:min-w-[220px] justify-center"
             >
               <span>Explore Event</span>
               <InfoIcon />
             </a>
           </motion.div>
 
-          {/* Junior Hackathon CTA — visible on mobile only (md: hidden) */}
+          {/* Junior Hackathon CTA */}
           <motion.div
             variants={itemVariants}
-            className="flex md:hidden items-center justify-center mt-2 w-full max-w-xs px-4 pointer-events-auto"
+            className="flex items-center justify-center mt-3 sm:mt-5 w-full max-w-[280px] sm:max-w-sm px-2 sm:px-4 mx-auto pointer-events-auto"
           >
             <a 
               href="https://forms.gle/nBespXoUn4PGBpcW9" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hero-action-btn hero-btn-primary hero-btn-blink hover:scale-[1.03] active:scale-[0.98] w-full text-center"
+              className="hero-action-btn hero-btn-primary hero-btn-blink hover:scale-[1.03] active:scale-[0.98] w-full min-h-[52px] justify-center text-center"
             >
               <span>Junior Hackathon (Cl. 10-12)</span>
               <ArrowTrendUpIcon />
             </a>
           </motion.div>
         </motion.div>
+        </div>
       </div>
     </VolumetricStudio>
   );

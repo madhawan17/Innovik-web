@@ -269,13 +269,13 @@ export default function App() {
 
       {/* Navigation Header */}
       <header className="navbar">
-        <div className="nav-container">
-          <a href="#home" className="nav-logo" aria-label="INNOVIK 6.0 Home">
+        <div className="nav-container px-4 sm:px-6 lg:px-8">
+          <a href="#home" className="nav-logo text-lg sm:text-xl" aria-label="INNOVIK 6.0 Home">
             <span className="logo-accent">INNOVIK</span> 6.0
           </a>
           
           <nav className={`nav-menu ${mobileMenuOpen ? "open" : ""}`} id="nav-menu" role="navigation" aria-label="Main Navigation">
-            <ul className="nav-list">
+            <ul className="nav-list flex flex-col md:flex-row gap-6">
               <li><a href="#home" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
               <li><a href="#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a></li>
               <li><a href="#problems" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Problems</a></li>
@@ -286,11 +286,11 @@ export default function App() {
             </ul>
           </nav>
 
-          <div className="nav-actions">
+          <div className="nav-actions flex items-center gap-2 sm:gap-4">
             <button id="theme-toggle" className="theme-toggle-btn" aria-label="Toggle theme" onClick={toggleTheme}>
               <i className={`fa-solid ${theme === "light" ? "fa-sun" : "fa-moon"}`} id="theme-icon"></i>
             </button>
-            <a href="https://forms.gle/nBespXoUn4PGBpcW9" target="_blank" rel="noopener noreferrer" className="btn btn-secondary nav-cta">Register Now!</a>
+            <a href="https://forms.gle/nBespXoUn4PGBpcW9" target="_blank" rel="noopener noreferrer" className="btn btn-secondary nav-cta text-sm sm:text-base">Register Now!</a>
             
             <button className="mobile-toggle" id="mobile-toggle" aria-expanded={mobileMenuOpen} aria-controls="nav-menu" aria-label="Toggle navigation menu" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               <span className="bar" style={mobileMenuOpen ? { transform: 'rotate(45deg) translate(5px, 5px)' } : undefined}></span>
@@ -303,15 +303,15 @@ export default function App() {
 
       <main>
         {/* Hero Section containing Volumetric Spotlight Room */}
-        <section id="home" className="hero-section" style={{ minHeight: "650px", height: "auto" }}>
+        <section id="home" className="hero-section hero-section min-h-[500px] sm:min-h-[650px]">
           <div className="hero-bg-glow" style={{ pointerEvents: "none" }}></div>
           <VolumetricHero />
         </section>
 
         {/* Stats Bar */}
         <div className="stats-bar-wrapper">
-          <div className="container">
-            <div className="stats-bar">
+          <div className="container px-4 sm:px-6">
+            <div className="stats-bar grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="stat-item">
                 <div className="stat-icon"><i className="fa-solid fa-users"></i></div>
                 <div className="stat-content">
@@ -319,21 +319,21 @@ export default function App() {
                   <span className="stat-label">Participants</span>
                 </div>
               </div>
-              <div className="stat-item">
+              <div className="stat-item flex items-center gap-3 p-3">
                 <div className="stat-icon"><i className="fa-solid fa-clock"></i></div>
                 <div className="stat-content">
                   <span className="stat-number">24 Hours</span>
                   <span className="stat-label">Non-Stop Coding</span>
                 </div>
               </div>
-              <div className="stat-item">
+              <div className="stat-item flex items-center gap-3 p-3">
                 <div className="stat-icon"><i className="fa-solid fa-lightbulb"></i></div>
                 <div className="stat-content">
                   <span className="stat-number">10</span>
                   <span className="stat-label">Problem Statements</span>
                 </div>
               </div>
-              <div className="stat-item">
+              <div className="stat-item flex items-center gap-3 p-3">
                 <div className="stat-icon"><i className="fa-solid fa-trophy"></i></div>
                 <div className="stat-content">
                   <span className="stat-number">Rs. 2,00,000</span>
@@ -345,20 +345,20 @@ export default function App() {
         </div>
 
         {/* About Section */}
-        <section id="about" className="about-section section-padding">
-          <div className="container">
+        <section id="about" className="about-section section-padding px-4 sm:px-6">
+          <div className="container  w-full">
             <div className="section-header text-center">
               <span className="section-tag">About the Event</span>
               <h2 className="section-title">Global Innovation Challenge</h2>
               <div className="header-bar"></div>
             </div>
             
-            <div className="about-grid">
-              <div className="about-card main-about">
+            <div className="about-grid grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="about-card main-about p-4 sm:p-6">
                 <h3>INNOVIK 6.0 – International Hackathon 2026</h3>
-                <p>INNOVIK 6.0 is a global innovation challenge designed to bring together students, innovators, developers, researchers, and technology enthusiasts to develop impactful solutions for real-world challenges through emerging technologies and intelligent systems. The hackathon aims to foster innovation, creativity, collaboration, entrepreneurship, and technology-driven problem solving while providing participants with national and international exposure.</p>
+                <p className="text-sm sm:text-base leading-relaxed">INNOVIK 6.0 is a global innovation challenge designed to bring together students, innovators, developers, researchers, and technology enthusiasts to develop impactful solutions for real-world challenges through emerging technologies and intelligent systems. The hackathon aims to foster innovation, creativity, collaboration, entrepreneurship, and technology-driven problem solving while providing participants with national and international exposure.</p>
                 
-                <div className="event-details-grid">
+                <div className="event-details-grid grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="detail-box">
                     <i className="fa-solid fa-calendar-days"></i>
                     <div>
@@ -366,7 +366,7 @@ export default function App() {
                       <p>15–16 September 2026</p>
                     </div>
                   </div>
-                  <div className="detail-box">
+                  <div className="detail-box flex items-start gap-3 p-3">
                     <i className="fa-solid fa-map-location-dot"></i>
                     <div>
                       <h4>Venue</h4>
@@ -376,13 +376,13 @@ export default function App() {
                 </div>
               </div>
               
-              <div className="about-card theme-about">
+              <div className="about-card theme-about p-4 sm:p-6">
                 <div className="theme-icon"><i className="fa-solid fa-brain"></i></div>
                 <span className="theme-tag">Main Theme</span>
                 <h3>Agentic AI for Smart Solutions</h3>
-                <p>This year, INNOVIK 6.0 places special emphasis on <strong>Agentic AI</strong> — autonomous intelligent systems designed to plan, decide, act, and collaborate to achieve complex objectives. Innovators will harness autonomous agents, multi-agent frameworks, machine learning models, and smart infrastructure to pioneer the next generation of solutions across industry sectors.</p>
+                <p className="text-sm sm:text-base leading-relaxed">This year, INNOVIK 6.0 places special emphasis on <strong>Agentic AI</strong> — autonomous intelligent systems designed to plan, decide, act, and collaborate to achieve complex objectives. Innovators will harness autonomous agents, multi-agent frameworks, machine learning models, and smart infrastructure to pioneer the next generation of solutions across industry sectors.</p>
                 
-                <div className="theme-visuals">
+                <div className="theme-visuals flex flex-wrap gap-2">
                   <div className="tech-tag">Autonomous Agents</div>
                   <div className="tech-tag">Multi-Agent Systems</div>
                   <div className="tech-tag">Machine Learning</div>
@@ -394,8 +394,8 @@ export default function App() {
         </section>
 
         {/* Problem Statements Section */}
-        <section id="problems" className="problems-section section-padding">
-          <div className="container">
+        <section id="problems" className="problems-section section-padding px-4 sm:px-6">
+          <div className="container  w-full">
             <div className="section-header text-center">
               <span className="section-tag">Problem Statements</span>
               <h2 className="section-title">Explore the Challenges</h2>
@@ -404,7 +404,7 @@ export default function App() {
             </div>
 
             {/* Filter Controls */}
-            <div className="filter-controls" id="filter-controls">
+            <div className="filter-controls flex flex-wrap justify-center gap-2" id="filter-controls">
               {[
                 { filter: "all", label: "All Challenges" },
                 { filter: "ai-ml", label: "AI/ML" },
@@ -426,12 +426,18 @@ export default function App() {
 
             {/* Problems Filterable Deck Slider */}
             <div className="problems-carousel-section">
-              <div className="problems-deck-wrapper" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
-                <button className="carousel-control prev" id="carousel-prev" aria-label="Previous challenge" onClick={handlePrevProblem}>
-                  <i className="fa-solid fa-chevron-left"></i>
-                </button>
-                
-                <div className="problems-deck" style={{ position: "relative", minHeight: "440px", width: "100%", maxWidth: "680px", display: "flex", justifyContent: "center" }}>
+              <div className="problems-deck-wrapper flex w-full">
+                <div className="problems-deck" style={{ position: "relative", width: "calc(100% - 32px)", maxWidth: "680px", margin: "0 auto", display: "flex", justifyContent: "center" }}>
+                  {/* Left Edge Arrow */}
+                  <button 
+                    className="carousel-control prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/3 sm:-translate-x-1/2 z-20 flex shadow-lg hover:scale-110 active:scale-95" 
+                    id="carousel-prev" 
+                    aria-label="Previous challenge" 
+                    onClick={handlePrevProblem}
+                  >
+                    <i className="fa-solid fa-chevron-left"></i>
+                  </button>
+
                   {filteredProblems.map((prob, idx) => (
                     <div 
                       key={prob.num} 
@@ -444,12 +450,19 @@ export default function App() {
                       }}
                     >
                       <div className="problem-num">{prob.num}</div>
-                      <div className="problem-header">
-                        <span className="problem-theme-tag">{prob.theme}</span>
-                        <h3>{prob.title}</h3>
+                      <div className="problem-header mb-2 sm:mb-4 pr-12 sm:pr-16">
+                        <span className="problem-theme-tag text-xs sm:text-sm font-semibold text-orange-500 mb-1 block uppercase tracking-wider">{prob.theme}</span>
+                        <h3 className="text-xl sm:text-2xl font-bold leading-tight">{prob.title}</h3>
                       </div>
-                      <p className="problem-desc">{prob.desc}</p>
-                      <div className="problem-footer">
+                      
+                      {/* Scrollable Description Container */}
+                      <div className="problem-desc-container overflow-y-auto max-h-[300px] sm:max-h-[350px] pr-2 mb-4">
+                        <p className="problem-desc break-words leading-relaxed whitespace-normal text-sm sm:text-base">
+                          {prob.desc}
+                        </p>
+                      </div>
+
+                      <div className="problem-footer mt-auto pt-4 border-t border-zinc-800/50 flex flex-wrap gap-2">
                         {prob.labels.map((lbl, i) => (
                           <span className="category-tag" key={i}>
                             <i className={`fa-solid ${prob.icons[i]}`}></i> {lbl}
@@ -461,11 +474,17 @@ export default function App() {
                   {filteredProblems.length === 0 && (
                     <div style={{ color: "var(--zinc-500)", alignSelf: "center", textAlign: "center" }}>No problem statements match the selected filter.</div>
                   )}
-                </div>
 
-                <button className="carousel-control next" id="carousel-next" aria-label="Next challenge" onClick={handleNextProblem}>
-                  <i className="fa-solid fa-chevron-right"></i>
-                </button>
+                  {/* Right Edge Arrow */}
+                  <button 
+                    className="carousel-control next absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 sm:translate-x-1/2 z-20 flex shadow-lg hover:scale-110 active:scale-95" 
+                    id="carousel-next" 
+                    aria-label="Next challenge" 
+                    onClick={handleNextProblem}
+                  >
+                    <i className="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
               </div>
               
               {filteredProblems.length > 0 && (
